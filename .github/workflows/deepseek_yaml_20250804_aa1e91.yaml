@@ -1,0 +1,18 @@
+on: push
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        
+      # Add your build steps here
+      - name: Install dependencies
+        run: npm install  # or appropriate command for your project
+        
+      - name: Build
+        run: npm run build  # or your build command
+        
+      - name: Deploy
+        run: |  # Add your deployment commands
+          echo "Add deployment commands here"
